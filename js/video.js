@@ -10,7 +10,6 @@ var video = document.querySelector('#player1');
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-
 });
 
 document.querySelector('#play').addEventListener("click", function() {
@@ -65,7 +64,7 @@ document.querySelector("#slider").addEventListener("change", function() {
 	console.log(video.volume);
 });
 
-document.querySelector("#orig").addEventListener("click", function() {
+document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
 });
 
