@@ -81,10 +81,12 @@ document.querySelector("#slider").addEventListener("change", function() {
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
+	console.log('vintag')
 });
 
 document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove('oldSchool');
+	console.log('orginal')
 });
 
 
