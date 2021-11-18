@@ -37,28 +37,27 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime += .15;
-	console.log(video.currentTime);
+	// video.currentTime += .15;
+	// console.log(video.currentTime);
 
-	if (video.currentTime <= video.duration -.15) {
-		console.log('going back to start');
-		video.currentTime = 0;
-
-	}
-	console.log(video.currentTime);
+	// if (video.currentTime <= video.duration) {
+	// 	video.currentTime = 0;
+	// 	console.log('going back to start');
+	// }
+	// console.log(video.currentTime);
 	
-// 	if currenttime <= duration
-// 	if 
-// 	(video.currentTime < video.duration - .15){
-// 		video.currentTime += .15;
-// }
-// 	else {
-// 		video.currentTime = 0;
-// 		console.log("going back to start");
-// 	}
-// 		video.play();
-// 		console.log(video.duration);
-// 		console.log("currentLocation"+video.currentTime);
+// 	if (video.currentTime <= duration)
+
+	if (video.currentTime < video.duration - 15){
+		video.currentTime += 15;
+}
+	else {
+		video.currentTime = 0;
+		console.log("going back to start");
+	}
+		video.play();
+		console.log(video.duration);
+		console.log("currentLocation"+video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
