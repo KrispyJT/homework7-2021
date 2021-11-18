@@ -25,26 +25,38 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() { 
-	video.playbackRate *=.95;
+	video.playbackRate *= .95;
 	console.log("Slower" + video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() { 
-	video.playbackRate /=.95;
+	video.playbackRate /= .95;
 	console.log("Faster" + video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	if (video.currentTime < video.duration - .15){
-		video.currentTime += .15;
-}
-	else {
+	video.currentTime += .15;
+	console.log(video.currentTime)
+
+	if (video.currentTime <= video.duration -.15) {
+		console.log('going back to start');
 		video.currentTime = 0;
-		console.log("going back to start");
+
 	}
-		video.play();
-		console.log(video.duration);
-		console.log("currentLocation"+video.currentTime);
+	console.log(video.currentTime)
+	
+// 	if currenttime <= duration
+// 	if 
+// 	(video.currentTime < video.duration - .15){
+// 		video.currentTime += .15;
+// }
+// 	else {
+// 		video.currentTime = 0;
+// 		console.log("going back to start");
+// 	}
+// 		video.play();
+// 		console.log(video.duration);
+// 		console.log("currentLocation"+video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -58,6 +70,9 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#slider").addEventListener("change", function() {
+	console.log('in slider');
+	console.log(this.value)
+	document.querySelector('#volume').innerHTML= this.value
 	video.volume = this.value / 100;
 	volume.innerHTML = this.value + "%";
 	console.log(this.value);
@@ -68,7 +83,7 @@ document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
 });
 
-document.querySelector("#vintage").addEventListener("click", function() {
+document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove('oldSchool');
 });
 
