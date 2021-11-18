@@ -27,23 +27,25 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() { 
 	video.playbackRate *= .95;
 	console.log("Slower" + video.playbackRate);
+	console.log('slow');
 });
 
 document.querySelector("#faster").addEventListener("click", function() { 
 	video.playbackRate /= .95;
 	console.log("Faster" + video.playbackRate);
+	console.log('fast');
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += .15;
-	console.log(video.currentTime)
+	console.log(video.currentTime);
 
 	if (video.currentTime <= video.duration -.15) {
 		console.log('going back to start');
 		video.currentTime = 0;
 
 	}
-	console.log(video.currentTime)
+	console.log(video.currentTime);
 	
 // 	if currenttime <= duration
 // 	if 
